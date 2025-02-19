@@ -61,7 +61,7 @@ for contract_info in contracts:
         # Buat transaksi
         txn = contract.functions.approve(spender_address, amount).build_transaction({
             'chainId': 1868,  # Ganti dengan Chain ID Soneium
-            'gas': 30000,  # Anda bisa mencoba mengurangi nilai ini
+            'gas': 50000,  # Anda bisa mencoba mengurangi nilai ini
             'gasPrice': gas_price,  # Gunakan harga gas yang disarankan
             'nonce': nonce,
         })
