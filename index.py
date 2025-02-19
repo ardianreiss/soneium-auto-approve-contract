@@ -3,7 +3,7 @@ import json
 import time
 
 # Koneksi ke node Ethereum
-infura_url = 'YOUR_SONEIUM_RPC'  # Ganti dengan URL node Ethereum Anda
+infura_url = 'https://rpc.soneium.org'  # Ganti dengan URL node Ethereum Anda
 web3 = Web3(Web3.HTTPProvider(infura_url))
 
 # Verifikasi koneksi
@@ -60,7 +60,7 @@ for contract_info in contracts:
 
         # Buat transaksi
         txn = contract.functions.approve(spender_address, amount).build_transaction({
-            'chainId': 1,  # Ganti dengan Chain ID Soneium
+            'chainId': 1868,  # Ganti dengan Chain ID Soneium
             'gas': 30000,  # Anda bisa mencoba mengurangi nilai ini
             'gasPrice': gas_price,  # Gunakan harga gas yang disarankan
             'nonce': nonce,
